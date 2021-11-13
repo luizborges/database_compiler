@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+std::unordered_map<std::string, database_obj_str::Field> persox = database_offline::map_table( "person", "dbname=pet user=borges password=JSG3bor_g873sqlptgs78b hostaddr=127.0.0.1 port=5432");
+
+std::string sql = "from xxx" + database_offline::sql_inner_join({"users", "system", "role"}, "dbname=security user=borges password=JSG3bor_g873sqlptgs78b hostaddr=127.0.0.1 port=5432") + "fuck";
+
+database_offline::init_database_graph("dbname=security user=borges password=JSG3bor_g873sqlptgs78b hostaddr=127.0.0.1 port=5432")
+
+#define DATABASE_CONNECTION "dbname=pet user=borges password=JSG3bor_g873sqlptgs78b hostaddr=127.0.0.1 port=5432"
+#define DATABASE_CONNECTION_SECURITY  "dbname=security user=borges password=JSG3bor_g873sqlptgs78b hostaddr=127.0.0.1 port=5432"
+/**
+ selects:
+  - to retry time in minutes in session:
+  SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - (select date from head where id = '123')))/60;
+ */
